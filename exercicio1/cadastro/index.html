@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Recrutas</title>
+</head>
+<body>
+    <header>
+        <h1>Cadastro de recrutas</h1>
+    </header>
+
+    <section>
+        <form method="post">
+            <caption>Preencha os campos abaixo:</caption> <br><br>
+            <label for="nome">Insira seu nome:</label>
+            <input type="text"  name="nome" id="nome"> <br><br>
+
+            <label for="sobrenome">Insira seu sobrenome: </label>
+            <input type="text" name="sobrenome" id="sobrenome"> <br><br>
+
+            <label for="campoEstudo">Indique seu campo de estudos: </label>
+            <textarea name="campoEstudo" id="campoEstudo" cols="30" rows="2"></textarea> <br><br>
+
+            <label for="anoNascimento">Indique o ano de seu nascimento</label>
+            <input type="date" name="anoNascimento" id="anoNascimento">
+            <br>
+
+            <button onclick="enviar()">enviar</button>
+
+        </form>
+    </section>
+
+    <section>
+        Os dados informados estão corretos:
+        <script src="index.js"></script>
+    </section>
+</body>
+</html>
