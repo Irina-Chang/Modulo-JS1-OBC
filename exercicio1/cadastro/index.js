@@ -1,7 +1,7 @@
 function enviar(){
-    let nomeCandidato = document.getElementById("nome").value;
-    let sobrenomeCandidato = document.getElementById("sobrenome").value;
-    let estudo = document.getElementById("campoEstudo").value;
+    let nomeCandidato = document.getElementById("nome");
+    let sobrenomeCandidato = document.getElementById("sobrenome");
+    let estudo = document.getElementById("campoEstudo");
 
 console.log(nomeCandidato +" "+sobrenomeCandidato +" "+"e"+" " + estudo)
 }
@@ -15,5 +15,5 @@ alert(
     "Recruta cadastrado com sucesso!\n" +
     "\nNome completo: " + primeiroNome + " " + sobrenome +
     "\nCampo de estudo: " + campoDeEstudo +
-    "\nIdade: " + (2022 - anoDeNascimento)
+    "\nIdade: " + (2023 - anoDeNascimento)
   )
