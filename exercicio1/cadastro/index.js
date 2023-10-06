@@ -3,7 +3,8 @@ function enviar(){
     let sobrenomeCandidato = document.getElementById("sobrenome");
     let estudo = document.getElementById("campoEstudo");
 
-console.log(nomeCandidato +" "+sobrenomeCandidato +" "+"e"+" " + estudo)
+    return
+//console.log(nomeCandidato +" "+sobrenomeCandidato +" "+"e"+" " + estudo)
 }
 
 const primeiroNome = prompt("Informe o primeiro nome do recruta:")
