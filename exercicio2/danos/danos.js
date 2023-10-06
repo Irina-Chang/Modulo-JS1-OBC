@@ -14,17 +14,27 @@ const defense = parseFloat(defensePoints)
 if (atack > defense && shield == false){
     const dano = atack - defense;
     const resultado = life - dano;
-    alert("O ataque foi de " + dano + "\nO " + nomePersonagemD +" está com "+resultado + " pontos de vida")}
+    alert("O ataque de "+ nomePersonagemA + " foi de " + dano + " pontos." +
+        "\nSeu poder de ataque é de: " + atack + " pontos." +
+         "\nO " + nomePersonagemD + " possuia:\n " + life + " pontos de vida\n" +
+         defense + " pontos de defesa." + "\nEle ficou com " + resultado + " pontos de vida")
+        }
 
     else if (atack > defense && shield == true){
         const dano = (atack-defense)/2;
         const resultado = life - dano;
-        alert("O ataque foi de " + dano + "\nO " + nomePersonagemD +" está com "+resultado + " pontos de vida")
+        alert("O ataque de "+ nomePersonagemA + " foi de " + dano + " pontos." +
+        "\nSeu poder de ataque é de: " + atack + " pontos." +
+         "\nO " + nomePersonagemD + " possuia:\n "+ life +" pontos de vida\n" +
+         defense + " pontos de defesa." + "\nEle ficou com " + resultado + " pontos de vida")
     }
 
     else if (atack <= defense){
         const dano = 0;
         const resultado = life - dano;
-        alert("O ataque foi de " + dano + "pontos."+"\nO " + nomePersonagemD +" está com "+resultado + " pontos de vida")
+        alert("O ataque de "+ nomePersonagemA + " foi de " + dano + " pontos." +
+        "\nSeu poder de ataque é de: " + atack + " pontos." +
+         "\nO " + nomePersonagemD + " possuia:\n "+ life +" pontos de vida\n" +
+         defense + " pontos de defesa." + "\nEle ficou com " + resultado + " pontos de vida")
     }
 
