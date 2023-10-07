@@ -1,16 +1,16 @@
-const speedA = prompt("Insira a velocidade do veículo A: ")
-const speedB = prompt("Insira a velocidade do veículo B: ")
+//correcao do exercicio foi adicionado o nome dos veiculos.
 
-const x = parseFloat(speedA)
-const y = parseFloat(speedB)
+const veiculoA = prompt("Qual o nome do primeiro veículo? ")
+const speedA = parseFloat(prompt("Insira a velocidade do primeiro veículo: "))
 
-if (x > y){
+const veiculoB = prompt("Qual o nome do segundo veículo? ")
+const speedB = parseFloat(prompt("Insira a velocidade do segundo veículo: "))
 
-alert("O veiculo A é mais rápido")}
-
-else if (x === y) {
-
-alert("Ambos estão na mesma velocidade")}
-
-else {alert("o veiculo B é mais rápido")} 
+if (speedA > speedB){
+alert( veiculoA + " é mais rápido que " + veiculoB)
+}
+else if (speedA === speedB) {
+alert("O " + veiculoA + " e o " + veiculoB + " estão na mesma velocidade.")
+}
+else {alert("O" + veiculoB + " é mais rápido que " + veiculoA)} 
  

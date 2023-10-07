@@ -1,40 +1,29 @@
+
 const nomePersonagemA = prompt("Qual o nome do seu personagem de ataque?")
-const atackPower= prompt("Qual o poder de ataque dele?")
+const atackPower= parseFloat(prompt("Qual o poder de ataque dele?"))
+
 const nomePersonagemD= prompt("Qual o nome do personagem de defesa?")
-const lifePoints = prompt("Insira o pontos de vida do personagem")
-const defensePoints = prompt("Insira os pontos de defesa")
-const shield = confirm("O personagem tem um escudo?")
+let lifePoints = parseFloat(prompt("Insira o pontos de vida do personagem"))
+const defensePoints = parseFloat(prompt("Insira os pontos de defesa"))
 
+const shield = prompt("O personagem tem um escudo? (Sim/Não)")
 
-const atack = parseFloat(atackPower)
-const life = parseFloat(lifePoints)
-const defense = parseFloat(defensePoints)
+let dano = 0
 
-
-if (atack > defense && shield == false){
-    const dano = atack - defense;
-    const resultado = life - dano;
-    alert("O ataque de "+ nomePersonagemA + " foi de " + dano + " pontos." +
-        "\nSeu poder de ataque é de: " + atack + " pontos." +
-         "\nO " + nomePersonagemD + " possuia:\n " + life + " pontos de vida\n" +
-         defense + " pontos de defesa." + "\nEle ficou com " + resultado + " pontos de vida")
-        }
-
-    else if (atack > defense && shield == true){
-        const dano = (atack-defense)/2;
-        const resultado = life - dano;
-        alert("O ataque de "+ nomePersonagemA + " foi de " + dano + " pontos." +
-        "\nSeu poder de ataque é de: " + atack + " pontos." +
-         "\nO " + nomePersonagemD + " possuia:\n "+ life +" pontos de vida\n" +
-         defense + " pontos de defesa." + "\nEle ficou com " + resultado + " pontos de vida")
+if (atackPower > defensePoints && shield === "Não"){
+    dano = atackPower - defensePoints;
+}
+   else if (atackPower > defensePoints && shield === "Sim"){
+        dano = (atackPower-defensePoints)/2;
     }
 
-    else if (atack <= defense){
-        const dano = 0;
-        const resultado = life - dano;
-        alert("O ataque de "+ nomePersonagemA + " foi de " + dano + " pontos." +
-        "\nSeu poder de ataque é de: " + atack + " pontos." +
-         "\nO " + nomePersonagemD + " possuia:\n "+ life +" pontos de vida\n" +
-         defense + " pontos de defesa." + "\nEle ficou com " + resultado + " pontos de vida")
-    }
+    lifePoints -= dano
+   
+        alert("O poder de ataque de " + nomePersonagemA + " é de: " + atackPower+ "." +
+        "\nE o dano causado foi de: " + dano + "." +
+        "\nO " + nomePersonagemD + " possui: " + 
+        "\nPontos de vida: " + lifePoints + "," +
+        "\nPontos de defesa: " + defensePoints + "."+
+        "\nEscudo: " + shield + "." )
+    
 
