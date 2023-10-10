@@ -1,32 +1,35 @@
 const value =parseFloat(prompt("Insira o valor, em metros, a ser convertido: "))
 
-const converse = prompt("Escolha qual medida deve ser convertido: \nmm) \ncm) \ndm) \ndam) \nhm) \nkm)")
+const converse = prompt(
+    "Escolha qual medida deve ser convertido:" +
+    "\n1. Milímetros (mm)"+ 
+    "\n2. Centímetros (cm)" +
+    "\n3. Decímetros (dm)" + 
+    "\n4. Decâmetros (dam)" +
+    "\n5. Hectômetros (hm)" +
+    "\n6. Quilômetros (km)"
+    )
 
-switch (resultado) {
+switch (converse) {
 
-    case "mm":
-       let mimiletros = value*1000 ;
-       alert("O valor em milimetros é de " + mimiletros + "mm")
+    case "1": 
+       let mm = value*1000;
+       alert("Resultado é: "+ mm)
     break
-    case "cm":
-        let centrimetros = value*100
-        alert("O valor em centímetros é de " + centrimetros)
+    case "2":
+        alert("Resultado: "+ value + "m = " + value*100 +"cm")
     break
-    case "dm":
-        let dm = value*10
-        alert("O valor em decímetros é de 'dm'")
+    case "3":
+        alert("Resultado: "+ value + "m = " + value*10 + "dm")
     break
-    case "dam":
-        let dam = value/10
-        alert("O valor em decâmetros é de 'dam'")
+    case "4":
+        alert("Resultado: " + value + "m = " + value/10 + "dam")
     break
-    case "hm":
-        let hm = value/100
-        alert("O valor em hectômetros é de 'hm'")
+    case "5":
+        alert("Resultado: " + value + "m = " + value/100 + "hm")
     break
-    case "km":
-        let km = value/1000
-        alert("O valor em quilômetros é de 'km'")
+    case "6":
+        alert("Resultado: " + value + "m = " + value/1000 + "km" )
     break
     default:
         alert("Finalizando")
